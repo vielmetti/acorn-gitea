@@ -5,7 +5,9 @@ containers: {
       "USER_UID": "1000"
       "USER_GID": "1000"
     }
-    ports: publish: "3000/http"
+    ports: {
+      publish: ["3000/http", "22/tcp"]
+    }
     dirs: {
       "/data": "volume://gitea-data"
     }
